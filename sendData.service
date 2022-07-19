@@ -1,0 +1,9 @@
+[Unit]
+Description=to run blog project
+After=syslog.target network.target remote-fs.target nss-lookup.target
+[Service]
+Type=simple
+ExecStart=java -jar /root/switchFiles/my-blog-3.0.1-SNAPSHOT.jar
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
