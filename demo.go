@@ -47,7 +47,7 @@ func main() {
 		client := &http.Client{Transport: &http.Transport{
 			Proxy: http.ProxyURL(uri),
 		},}
-    	req ,_ := http.NewRequest("GET", "http://baidu.com", nil)
+    	req ,_ := http.NewRequest("GET", "https://durl.cz/tnZRk", nil)
 		req.Header.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36")
 		resp, err = client.Do(req)
 		if err != nil {
@@ -55,6 +55,7 @@ func main() {
 			continue
 		}
 		fmt.Println(resp.StatusCode)
+		
 		k++
 	}
 }
